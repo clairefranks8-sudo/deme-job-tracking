@@ -23,11 +23,11 @@ body{font-family:Arial,sans-serif;background:#f8fafc;min-height:100vh}
 .page-title{font-size:22px;font-weight:bold;color:#1e293b}
 
 .btn-primary{background:#1e3a5f;color:#fff;border:none;border-radius:6px;padding:9px 18px;font-size:13px;font-weight:bold;cursor:pointer}
-.btn-green{background:#059669;color:#fff;border:none;border-radius:6px;padding:9px 18px;font-size:13px;font-weight:bold;cursor:pointer}
 .btn-ghost{background:transparent;color:#475569;border:1px solid #cbd5e1;border-radius:6px;padding:8px 14px;font-size:13px;cursor:pointer}
 .btn-small{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;border-radius:5px;padding:5px 12px;font-size:12px;cursor:pointer}
 .btn-danger{background:#fff5f5;color:#ef4444;border:1px solid #fecaca;border-radius:5px;padding:5px 12px;font-size:12px;cursor:pointer}
 .btn-disabled{background:transparent;color:#cbd5e1;border:1px solid #e2e8f0;border-radius:6px;padding:8px 14px;font-size:13px;cursor:not-allowed}
+.btn-green{background:#059669;color:#fff;border:none;border-radius:6px;padding:9px 18px;font-size:13px;font-weight:bold;cursor:pointer}
 .btn-row{display:flex;gap:8px;flex-wrap:wrap}
 
 .card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;margin-bottom:16px}
@@ -35,7 +35,7 @@ body{font-family:Arial,sans-serif;background:#f8fafc;min-height:100vh}
 .field-label{font-size:9px;font-weight:bold;color:#94a3b8;letter-spacing:.1em;margin-bottom:5px}
 
 input[type=date],select,input[type=text],textarea{border:1px solid #e2e8f0;border-radius:6px;padding:8px 10px;font-size:13px;color:#1e293b;background:#fff;width:100%;font-family:Arial,sans-serif}
-textarea{resize:vertical;min-height:56px}
+textarea{resize:vertical;min-height:70px}
 
 .progress-wrap{display:flex;gap:12px;align-items:center;margin-bottom:12px}
 .progress-bar{flex:1;height:6px;background:#e2e8f0;border-radius:999px;overflow:hidden}
@@ -50,22 +50,24 @@ textarea{resize:vertical;min-height:56px}
 .si-name{font-size:10px;font-weight:bold;color:#334155;letter-spacing:.02em;line-height:1.3;margin-left:6px}
 
 .detail{flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:20px;max-height:82vh;overflow-y:auto}
-.job-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.job-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
 .job-title{font-size:14px;font-weight:bold;color:#1e293b;letter-spacing:.03em}
 
-/* Section blocks */
+/* Action items box */
+.action-box{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.action-box-label{font-size:10px;font-weight:bold;color:#92400e;letter-spacing:.08em;margin-bottom:6px}
+.action-box textarea{background:#fff;border-color:#fde68a;min-height:60px;font-size:13px}
+
 .sec-block{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:10px;overflow:hidden}
 .sec-hdr{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;cursor:pointer;user-select:none}
-.sec-hdr:hover{opacity:.9}
 .sec-name{font-size:11px;font-weight:bold;letter-spacing:.05em}
 .sec-body{display:none;border-top:1px solid #e2e8f0}
 .sec-body.open{display:block}
 
-/* Item rows */
-.item-row{display:grid;grid-template-columns:140px 150px 1fr 1fr 1fr;gap:8px;align-items:center;padding:8px 14px;border-bottom:1px solid #f8fafc}
+.item-row{display:grid;grid-template-columns:140px 160px 1fr 1fr 1fr;gap:8px;align-items:start;padding:10px 14px;border-bottom:1px solid #f1f5f9}
 .item-row:last-child{border-bottom:none}
 .item-row:nth-child(even){background:#fafafa}
-.item-name{font-size:11px;font-weight:bold;color:#334155}
+.item-name{font-size:11px;font-weight:bold;color:#334155;padding-top:6px}
 .item-status select{font-size:11px;padding:5px 6px}
 .item-date input{font-size:11px;padding:5px 6px}
 .item-notes input{font-size:11px;padding:5px 6px}
@@ -78,19 +80,18 @@ textarea{resize:vertical;min-height:56px}
 .alert{padding:10px 16px;border-radius:8px;margin-bottom:12px;font-size:13px;font-weight:bold}
 .alert-ok{background:#d1fae5;color:#065f46}
 .alert-warn{background:#fef9c3;color:#854d0e}
-.alert-err{background:#fee2e2;color:#991b1b}
 
-/* History view */
+.meeting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f1f5f9}
+.meeting-date{font-size:15px;font-weight:bold;color:#1e293b}
+.meeting-meta{font-size:12px;color:#64748b;margin-top:2px}
+
 .hist-entry{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:12px;overflow:hidden}
 .hist-hdr{background:#1e3a5f;color:#fff;padding:10px 14px;font-size:12px;font-weight:bold;display:flex;justify-content:space-between}
 .hist-job{padding:8px 14px;border-bottom:1px solid #f1f5f9;font-size:12px}
 .hist-job:last-child{border-bottom:none}
 .hist-job-name{font-weight:bold;color:#1e293b;margin-bottom:4px;font-size:11px}
 .hist-item{color:#475569;font-size:11px;padding:2px 0;padding-left:12px}
-
-.meeting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f1f5f9}
-.meeting-date{font-size:15px;font-weight:bold;color:#1e293b}
-.meeting-meta{font-size:12px;color:#64748b;margin-top:2px}
+.hist-actions{background:#fffbeb;border-top:1px solid #fde68a;padding:8px 14px;font-size:11px;color:#92400e}
 
 .empty{color:#94a3b8;font-size:14px;text-align:center;padding:40px}
 
@@ -125,25 +126,22 @@ const JOBS = [
   "SRQ MALL PHASE 1A","SRQ MALL PHASE 1B","VILLAGES OF GLEN CREEK PHASE 1C",
   "VILLAGES OF GLEN CREEK PHASE 2B","WILLOW PHASE 3"
 ];
-
 const SECTIONS = {
-  "STORM DRAINAGE": ["PIPE","FITTINGS","YARD DRAINS","UNDER DRAIN"],
-  "FORCE MAIN":     ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
-  "SANITARY SEWER": ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
-  "POTABLE WATER":  ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
-  "FIRE":           ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
-  "RECLAIM":        ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
+  "STORM DRAINAGE":["PIPE","FITTINGS","YARD DRAINS","UNDER DRAIN"],
+  "FORCE MAIN":    ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
+  "SANITARY SEWER":["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
+  "POTABLE WATER": ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
+  "FIRE":          ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
+  "RECLAIM":       ["PVC","PRESSURE MATERIAL","SERVICE","BRASS","PUNCH OUT MATERIAL"],
 };
-
 const SEC_COLORS = {
-  "STORM DRAINAGE": {bg:"#e0f0fb",hdr:"#2980b9",text:"#1a5276"},
-  "FORCE MAIN":     {bg:"#e9f7ef",hdr:"#27ae60",text:"#1e8449"},
-  "SANITARY SEWER": {bg:"#fef9e7",hdr:"#d4ac0d",text:"#7d6608"},
-  "POTABLE WATER":  {bg:"#eaf4fb",hdr:"#2e86c1",text:"#1a5276"},
-  "FIRE":           {bg:"#fdf2f2",hdr:"#c0392b",text:"#922b21"},
-  "RECLAIM":        {bg:"#f5eef8",hdr:"#8e44ad",text:"#6c3483"},
+  "STORM DRAINAGE":{bg:"#e0f0fb",hdr:"#2980b9"},
+  "FORCE MAIN":    {bg:"#e9f7ef",hdr:"#27ae60"},
+  "SANITARY SEWER":{bg:"#fef9e7",hdr:"#d4ac0d"},
+  "POTABLE WATER": {bg:"#eaf4fb",hdr:"#2e86c1"},
+  "FIRE":          {bg:"#fdf2f2",hdr:"#c0392b"},
+  "RECLAIM":       {bg:"#f5eef8",hdr:"#8e44ad"},
 };
-
 const STATUS_OPTS = ["","RELEASED","PENDING RELEASE","NEEDS ORDERING","ON HOLD","COMPLETE","N/A"];
 const STATUS_ST = {
   "RELEASED":        {bg:"#d1fae5",color:"#065f46",dot:"#10b981"},
@@ -154,157 +152,105 @@ const STATUS_ST = {
   "N/A":             {bg:"#f1f5f9",color:"#94a3b8",dot:"#cbd5e1"},
 };
 
-const SK = "deme_state_v2";
-const HK = "deme_history_v2";
+const SK="deme_state_v2", HK="deme_history_v2";
+let jobStatuses={}, jobNotes={}, meetings=[];
+let view="home", activeMtgId=null, activeJobIdx=0, expandedSecs={}, discussed={};
 
-// State: jobStatuses[jobName][secName][itemName] = {status, releaseDate, shipDate, notes}
-// meetings: [{id, date, changes: [{job,sec,item,field,oldVal,newVal}], summary}]
-
-let jobStatuses = {};
-let meetings = [];
-let view = "home";
-let activeMtgId = null;
-let activeJobIdx = 0;
-let expandedSecs = {};
-let discussed = {}; // {jobName: bool} for current meeting
-
-function initStatuses() {
-  JOBS.forEach(j => {
-    if (!jobStatuses[j]) jobStatuses[j] = {};
-    Object.keys(SECTIONS).forEach(sec => {
-      if (!jobStatuses[j][sec]) jobStatuses[j][sec] = {};
-      SECTIONS[sec].forEach(item => {
-        if (!jobStatuses[j][sec][item]) {
-          jobStatuses[j][sec][item] = {status:"",releaseDate:"",shipDate:"",notes:""};
-        }
+function initStatuses(){
+  JOBS.forEach(j=>{
+    if(!jobStatuses[j])jobStatuses[j]={};
+    if(!jobNotes[j])jobNotes[j]="";
+    Object.keys(SECTIONS).forEach(sec=>{
+      if(!jobStatuses[j][sec])jobStatuses[j][sec]={};
+      SECTIONS[sec].forEach(item=>{
+        if(!jobStatuses[j][sec][item])
+          jobStatuses[j][sec][item]={status:"",releaseDate:"",shipDate:"",notes:""};
       });
     });
   });
 }
 
-function loadData() {
-  try {
-    const s = localStorage.getItem(SK);
-    if (s) jobStatuses = JSON.parse(s);
-  } catch {}
-  try {
-    const h = localStorage.getItem(HK);
-    if (h) meetings = JSON.parse(h);
-  } catch {}
+function loadData(){
+  try{const s=localStorage.getItem(SK);if(s){const p=JSON.parse(s);jobStatuses=p.statuses||{};jobNotes=p.notes||{};}}catch{}
+  try{const h=localStorage.getItem(HK);if(h)meetings=JSON.parse(h);}catch{}
   initStatuses();
 }
-
-function saveData() {
-  localStorage.setItem(SK, JSON.stringify(jobStatuses));
-  localStorage.setItem(HK, JSON.stringify(meetings));
+function saveData(){
+  localStorage.setItem(SK,JSON.stringify({statuses:jobStatuses,notes:jobNotes}));
+  localStorage.setItem(HK,JSON.stringify(meetings));
 }
 
-function today() { return new Date().toISOString().split("T")[0]; }
-function fmtDate(iso) {
-  if (!iso) return "";
-  const [y,m,d] = iso.split("-"); return `${m}/${d}/${y}`;
-}
-function fmtDisplay(iso) {
-  if (!iso) return "";
-  return new Date(iso+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+function today(){return new Date().toISOString().split("T")[0];}
+function fmtDate(iso){if(!iso)return"";const[y,m,d]=iso.split("-");return`${m}/${d}/${y}`;}
+function fmtDisplay(iso){if(!iso)return"";return new Date(iso+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});}
+function esc(s){return(s||"").replace(/\\/g,"\\\\").replace(/'/g,"\\'").replace(/"/g,"&quot;");}
+
+function tryLogin(){
+  if(document.getElementById("pw").value===PW){
+    document.getElementById("login-screen").style.display="none";
+    document.getElementById("app").style.display="block";
+    loadData();render();
+  }else{document.getElementById("login-err").textContent="Incorrect password.";}
 }
 
-function tryLogin() {
-  if (document.getElementById("pw").value === PW) {
-    document.getElementById("login-screen").style.display = "none";
-    document.getElementById("app").style.display = "block";
-    loadData(); render();
-  } else {
-    document.getElementById("login-err").textContent = "Incorrect password.";
-  }
+function render(){
+  if(view==="home")renderHome();
+  else if(view==="meeting")renderMeeting();
+  else if(view==="history")renderHistory();
 }
 
-// ── RENDER ────────────────────────────────────────────────────────────────────
-function render() {
-  if (view==="home") renderHome();
-  else if (view==="meeting") renderMeeting();
-  else if (view==="history") renderHistory();
-}
-
-// ── HOME ──────────────────────────────────────────────────────────────────────
-function renderHome() {
-  const app = document.getElementById("app");
-  const recentMtgs = meetings.slice(0,8).map(m => {
-    const jobCount = [...new Set(m.changes.map(c=>c.job))].length;
-    return `<div class="meeting-row">
+// HOME
+function renderHome(){
+  const recent=meetings.slice(0,8).map(m=>{
+    const jc=[...new Set(m.changes.map(c=>c.job))].length;
+    return`<div class="meeting-row">
       <div>
         <div class="meeting-date">${fmtDisplay(m.date)}</div>
-        <div class="meeting-meta">${jobCount} job${jobCount!==1?'s':''} updated</div>
+        <div class="meeting-meta">${jc} job${jc!==1?'s':''} updated</div>
       </div>
       <div style="display:flex;gap:8px">
-        <button class="btn-small" onclick="openMtg(${m.id})">View</button>
+        <button class="btn-small" onclick="view='history';render()">View</button>
         <button class="btn-danger" onclick="deleteMtg(${m.id})">Delete</button>
       </div>
     </div>`;
   }).join("");
-
-  app.innerHTML = `
+  document.getElementById("app").innerHTML=`
     <div class="header">
-      <div>
-        <div class="eyebrow">DEME — JOB TRACKING</div>
-        <div class="page-title">Weekly Meeting Log</div>
-      </div>
-      <button class="btn-ghost" onclick="view='history';render()">📋 Meeting History (${meetings.length})</button>
+      <div><div class="eyebrow">DEME — JOB TRACKING</div><div class="page-title">Weekly Meeting Log</div></div>
+      <button class="btn-ghost" onclick="view='history';render()">📋 History (${meetings.length})</button>
     </div>
     <div class="card">
       <div class="card-label">START NEW MEETING WITH CHRIS</div>
       <div style="display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap">
-        <div>
-          <div class="field-label">MEETING DATE</div>
-          <input type="date" id="new-date" value="${today()}" style="width:auto"/>
-        </div>
+        <div><div class="field-label">MEETING DATE</div>
+        <input type="date" id="new-date" value="${today()}" style="width:auto"/></div>
         <button class="btn-primary" onclick="startMeeting()">+ New Meeting</button>
       </div>
     </div>
-    ${meetings.length>0?`<div class="card"><div class="card-label">RECENT MEETINGS</div>${recentMtgs}</div>`:`<div class="empty">No meetings yet — start one above!</div>`}
-  `;
+    ${meetings.length>0?`<div class="card"><div class="card-label">RECENT MEETINGS</div>${recent}</div>`:`<div class="empty">No meetings yet — start one above!</div>`}`;
 }
 
-function startMeeting() {
-  const date = document.getElementById("new-date").value || today();
-  activeMtgId = Date.now();
-  activeJobIdx = 0;
-  expandedSecs = {};
-  discussed = {};
-  // Store snapshot of current statuses for change tracking
-  window._mtgSnapshot = JSON.parse(JSON.stringify(jobStatuses));
-  window._mtgDate = date;
-  view = "meeting";
-  render();
+function startMeeting(){
+  const date=document.getElementById("new-date").value||today();
+  activeMtgId=Date.now(); activeJobIdx=0; expandedSecs={}; discussed={};
+  window._mtgSnapshot=JSON.parse(JSON.stringify({statuses:jobStatuses,notes:jobNotes}));
+  window._mtgDate=date;
+  view="meeting"; render();
 }
 
-function openMtg(id) {
-  const m = meetings.find(x=>x.id===id);
-  if (!m) return;
-  // Show history detail
-  view = "history";
-  render();
-  // Scroll to that meeting
-  setTimeout(()=>{
-    const el = document.getElementById("mtg-"+id);
-    if (el) el.scrollIntoView({behavior:"smooth"});
-  },100);
+function deleteMtg(id){
+  if(!confirm("Delete this meeting?"))return;
+  meetings=meetings.filter(m=>m.id!==id);
+  saveData();render();
 }
 
-function deleteMtg(id) {
-  if (!confirm("Delete this meeting log?")) return;
-  meetings = meetings.filter(m=>m.id!==id);
-  saveData(); render();
-}
+// MEETING
+function renderMeeting(){
+  const dc=Object.values(discussed).filter(Boolean).length;
+  const job=JOBS[activeJobIdx];
+  const pct=Math.round((dc/JOBS.length)*100);
 
-// ── MEETING ───────────────────────────────────────────────────────────────────
-function renderMeeting() {
-  const app = document.getElementById("app");
-  const discussedCount = Object.values(discussed).filter(Boolean).length;
-  const pct = Math.round((discussedCount/JOBS.length)*100);
-  const job = JOBS[activeJobIdx];
-
-  const sidebar = JOBS.map((j,idx) => `
+  const sidebar=JOBS.map((j,idx)=>`
     <div class="si${idx===activeJobIdx?' active':''}" onclick="selJob(${idx})">
       <div style="display:flex;align-items:center">
         <div class="si-dot" style="background:${discussed[j]?'#10b981':'#d1d5db'}"></div>
@@ -313,65 +259,51 @@ function renderMeeting() {
       ${discussed[j]?'<span style="color:#10b981;font-size:11px;font-weight:bold">✓</span>':''}
     </div>`).join("");
 
-  const secBlocks = Object.keys(SECTIONS).map(sec => {
-    const c = SEC_COLORS[sec];
-    const items = SECTIONS[sec];
-    const key = `${activeJobIdx}-${sec}`;
-    const isOpen = expandedSecs[key];
+  const secBlocks=Object.keys(SECTIONS).map(sec=>{
+    const c=SEC_COLORS[sec];
+    const items=SECTIONS[sec];
+    const key=`${activeJobIdx}-${sec}`;
+    const isOpen=expandedSecs[key];
+    const statuses=items.map(item=>jobStatuses[job][sec][item].status).filter(s=>s&&s!=="N/A"&&s!=="");
+    const rel=statuses.filter(s=>s==="RELEASED").length;
+    const pen=statuses.filter(s=>s==="PENDING RELEASE").length;
+    const ned=statuses.filter(s=>s==="NEEDS ORDERING").length;
+    let badges="";
+    if(rel)badges+=`<span class="sum-badge" style="background:#d1fae5;color:#065f46">${rel} Released</span>`;
+    if(pen)badges+=`<span class="sum-badge" style="background:#fef9c3;color:#854d0e">${pen} Pending</span>`;
+    if(ned)badges+=`<span class="sum-badge" style="background:#fee2e2;color:#991b1b">${ned} Needs Order</span>`;
 
-    // Summary badges
-    const statuses = items.map(item => jobStatuses[job][sec][item].status).filter(s=>s&&s!=="N/A"&&s!=="");
-    const released = statuses.filter(s=>s==="RELEASED").length;
-    const pending = statuses.filter(s=>s==="PENDING RELEASE").length;
-    const needs = statuses.filter(s=>s==="NEEDS ORDERING").length;
-    let summaryBadges = "";
-    if (released) summaryBadges += `<span class="sum-badge" style="background:#d1fae5;color:#065f46">${released} Released</span>`;
-    if (pending)  summaryBadges += `<span class="sum-badge" style="background:#fef9c3;color:#854d0e">${pending} Pending</span>`;
-    if (needs)    summaryBadges += `<span class="sum-badge" style="background:#fee2e2;color:#991b1b">${needs} Needs Order</span>`;
-
-    const itemRows = items.map(item => {
-      const d = jobStatuses[job][sec][item];
-      const opts = STATUS_OPTS.map(o=>`<option value="${o}"${d.status===o?'selected':''}>${o||'— Status —'}</option>`).join("");
-      return `<div class="item-row">
+    const itemRows=items.map(item=>{
+      const d=jobStatuses[job][sec][item];
+      const opts=STATUS_OPTS.map(o=>`<option value="${o}"${d.status===o?'selected':''}>${o||'— Status —'}</option>`).join("");
+      return`<div class="item-row">
         <div class="item-name">${item}</div>
-        <div class="item-status">
-          <select onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','status',this.value)">${opts}</select>
-        </div>
-        <div class="item-date">
-          <div class="field-label">RELEASE DATE</div>
-          <input type="date" value="${d.releaseDate}" onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','releaseDate',this.value)"/>
-        </div>
-        <div class="item-date">
-          <div class="field-label">SHIP DATE</div>
-          <input type="date" value="${d.shipDate}" onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','shipDate',this.value)"/>
-        </div>
-        <div class="item-notes">
-          <div class="field-label">NOTES / PO#</div>
-          <input type="text" value="${esc(d.notes)}" placeholder="PO#, supplier..." onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','notes',this.value)"/>
-        </div>
+        <div class="item-status"><select onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','status',this.value)">${opts}</select></div>
+        <div class="item-date"><div class="field-label">RELEASE DATE</div>
+          <input type="date" value="${d.releaseDate}" onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','releaseDate',this.value)"/></div>
+        <div class="item-date"><div class="field-label">SHIP DATE</div>
+          <input type="date" value="${d.shipDate}" onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','shipDate',this.value)"/></div>
+        <div class="item-notes"><div class="field-label">NOTES / PO#</div>
+          <input type="text" value="${esc(d.notes)}" placeholder="PO#, supplier..." onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','notes',this.value)"/></div>
       </div>`;
     }).join("");
 
-    return `<div class="sec-block">
+    return`<div class="sec-block">
       <div class="sec-hdr" style="background:${c.hdr}" onclick="toggleSec('${key}')">
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px">
           <span class="sec-name" style="color:#fff">${sec}</span>
-          <div class="sec-summary">${summaryBadges}</div>
+          <div class="sec-summary">${badges}</div>
         </div>
         <span style="color:rgba(255,255,255,.8);font-size:11px">${isOpen?'▲':'▼'}</span>
       </div>
-      <div class="sec-body${isOpen?' open':''}" style="background:${c.bg}">
-        ${itemRows}
-      </div>
+      <div class="sec-body${isOpen?' open':''}" style="background:${c.bg}">${itemRows}</div>
     </div>`;
   }).join("");
 
-  app.innerHTML = `
+  document.getElementById("app").innerHTML=`
     <div class="header">
-      <div>
-        <div class="eyebrow">MEETING WITH CHRIS — ${fmtDisplay(window._mtgDate)}</div>
-        <div class="page-title">${job}</div>
-      </div>
+      <div><div class="eyebrow">MEETING WITH CHRIS — ${fmtDisplay(window._mtgDate)}</div>
+      <div class="page-title">${job}</div></div>
       <div class="btn-row">
         <button class="btn-green" onclick="saveMeeting()">💾 Save Meeting Log</button>
         <button class="btn-ghost" onclick="view='home';render()">← Home</button>
@@ -380,7 +312,7 @@ function renderMeeting() {
     <div id="alert-box"></div>
     <div class="progress-wrap">
       <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
-      <div style="font-size:12px;color:#64748b;white-space:nowrap">${discussedCount}/${JOBS.length} jobs</div>
+      <div style="font-size:12px;color:#64748b;white-space:nowrap">${dc}/${JOBS.length} jobs</div>
     </div>
     <div class="layout">
       <div class="sidebar">${sidebar}</div>
@@ -392,6 +324,13 @@ function renderMeeting() {
             Discussed this meeting
           </label>
         </div>
+
+        <div class="action-box">
+          <div class="action-box-label">📋 ACTION ITEMS / NOTES FROM CHRIS</div>
+          <textarea id="job-notes-${activeJobIdx}" placeholder="e.g. Send submittals, check on permit, call supplier, follow up on RFI..."
+            onchange="updateNotes('${esc(job)}',this.value)">${esc(jobNotes[job]||"")}</textarea>
+        </div>
+
         ${secBlocks}
         <div class="nav-row">
           <button class="${activeJobIdx>0?'btn-ghost':'btn-disabled'}" onclick="prevJob()" ${activeJobIdx===0?'disabled':''}>← Prev</button>
@@ -399,35 +338,31 @@ function renderMeeting() {
           <button class="${activeJobIdx<JOBS.length-1?'btn-primary':'btn-disabled'}" onclick="nextJob()" ${activeJobIdx===JOBS.length-1?'disabled':''}>Next →</button>
         </div>
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
-function esc(s) { return (s||"").replace(/'/g,"\\'").replace(/"/g,"&quot;"); }
+function selJob(idx){activeJobIdx=idx;render();}
+function prevJob(){if(activeJobIdx>0){activeJobIdx--;render();}}
+function nextJob(){if(activeJobIdx<JOBS.length-1){activeJobIdx++;render();}}
+function toggleSec(key){expandedSecs[key]=!expandedSecs[key];render();}
+function setDiscussed(job,val){discussed[job]=val;saveData();render();}
+function updateNotes(job,val){jobNotes[job]=val;saveData();}
+function updateItem(job,sec,item,field,value){jobStatuses[job][sec][item][field]=value;saveData();}
 
-function selJob(idx) { activeJobIdx=idx; render(); }
-function prevJob() { if(activeJobIdx>0){activeJobIdx--;render();} }
-function nextJob() { if(activeJobIdx<JOBS.length-1){activeJobIdx++;render();} }
-function toggleSec(key) { expandedSecs[key]=!expandedSecs[key]; render(); }
-function setDiscussed(job,val) { discussed[job]=val; saveData(); render(); }
+function saveMeeting(){
+  const snap=window._mtgSnapshot||{};
+  const changes=[];
+  const discussedJobs=Object.keys(discussed).filter(j=>discussed[j]);
+  const actionNotes={};
 
-function updateItem(job,sec,item,field,value) {
-  jobStatuses[job][sec][item][field] = value;
-  saveData();
-}
-
-function saveMeeting() {
-  const snap = window._mtgSnapshot || {};
-  const changes = [];
-  const discussedJobs = Object.keys(discussed).filter(j=>discussed[j]);
-
-  discussedJobs.forEach(job => {
-    Object.keys(SECTIONS).forEach(sec => {
-      SECTIONS[sec].forEach(item => {
-        const curr = jobStatuses[job][sec][item];
-        const prev = (snap[job]&&snap[job][sec]&&snap[job][sec][item]) || {};
-        ["status","releaseDate","shipDate","notes"].forEach(field => {
-          if (curr[field] !== (prev[field]||"") && curr[field]) {
+  discussedJobs.forEach(job=>{
+    if(jobNotes[job])actionNotes[job]=jobNotes[job];
+    Object.keys(SECTIONS).forEach(sec=>{
+      SECTIONS[sec].forEach(item=>{
+        const curr=jobStatuses[job][sec][item];
+        const prev=(snap.statuses&&snap.statuses[job]&&snap.statuses[job][sec]&&snap.statuses[job][sec][item])||{};
+        ["status","releaseDate","shipDate","notes"].forEach(field=>{
+          if(curr[field]!==(prev[field]||"")&&curr[field]){
             changes.push({job,sec,item,field,value:curr[field]});
           }
         });
@@ -435,74 +370,52 @@ function saveMeeting() {
     });
   });
 
-  const mtg = {
-    id: activeMtgId,
-    date: window._mtgDate,
-    changes,
-    discussedJobs,
-  };
-
-  meetings.unshift(mtg);
+  meetings.unshift({id:activeMtgId,date:window._mtgDate,changes,discussedJobs,actionNotes});
   saveData();
 
-  const ab = document.getElementById("alert-box");
-  if (ab) {
-    ab.innerHTML = `<div class="alert alert-ok">✅ Meeting saved! ${changes.length} update${changes.length!==1?'s':''} logged across ${discussedJobs.length} job${discussedJobs.length!==1?'s':''}.</div>`;
-    setTimeout(()=>{ view="home"; render(); }, 2000);
+  const ab=document.getElementById("alert-box");
+  if(ab){
+    ab.innerHTML=`<div class="alert alert-ok">✅ Meeting saved! ${changes.length} material update${changes.length!==1?'s':''} across ${discussedJobs.length} job${discussedJobs.length!==1?'s':''}.</div>`;
+    setTimeout(()=>{view="home";render();},2000);
   }
 }
 
-// ── HISTORY ───────────────────────────────────────────────────────────────────
-function renderHistory() {
-  const app = document.getElementById("app");
-  if (meetings.length===0) {
-    app.innerHTML = `
-      <div class="header">
-        <div><div class="eyebrow">DEME — JOB TRACKING</div><div class="page-title">Meeting History</div></div>
-        <button class="btn-ghost" onclick="view='home';render()">← Home</button>
-      </div>
+// HISTORY
+function renderHistory(){
+  if(meetings.length===0){
+    document.getElementById("app").innerHTML=`
+      <div class="header"><div><div class="eyebrow">DEME — JOB TRACKING</div><div class="page-title">Meeting History</div></div>
+      <button class="btn-ghost" onclick="view='home';render()">← Home</button></div>
       <div class="empty">No meetings logged yet.</div>`;
     return;
   }
-
-  const entries = meetings.map(m => {
-    const byJob = {};
-    m.changes.forEach(c => {
-      if (!byJob[c.job]) byJob[c.job] = [];
-      byJob[c.job].push(c);
-    });
-
-    const jobHTML = Object.keys(byJob).map(job => {
-      const items = byJob[job].map(c => {
-        let label = c.field==="status"?c.value:c.field==="releaseDate"?`Release: ${fmtDate(c.value)}`:c.field==="shipDate"?`Ship: ${fmtDate(c.value)}`:`Note: ${c.value}`;
-        const st = STATUS_ST[c.value]||{};
-        const badge = c.field==="status"&&st.bg?`<span class="sum-badge" style="background:${st.bg};color:${st.color}">${c.value}</span>`:`<span style="color:#475569">${label}</span>`;
-        return `<div class="hist-item">• ${c.sec} → ${c.item}: ${badge}</div>`;
+  const entries=meetings.map(m=>{
+    const byJob={};
+    m.changes.forEach(c=>{if(!byJob[c.job])byJob[c.job]=[];byJob[c.job].push(c);});
+    const jobHTML=Object.keys(byJob).map(job=>{
+      const items=byJob[job].map(c=>{
+        let label=c.field==="status"?c.value:c.field==="releaseDate"?`Release: ${fmtDate(c.value)}`:c.field==="shipDate"?`Ship: ${fmtDate(c.value)}`:`Note: ${c.value}`;
+        const st=STATUS_ST[c.value]||{};
+        const badge=c.field==="status"&&st.bg?`<span class="sum-badge" style="background:${st.bg};color:${st.color}">${c.value}</span>`:`<span>${label}</span>`;
+        return`<div class="hist-item">• ${c.sec} → ${c.item}: ${badge}</div>`;
       }).join("");
-      return `<div class="hist-job"><div class="hist-job-name">${job}</div>${items}</div>`;
+      const note=m.actionNotes&&m.actionNotes[job]?`<div style="margin-top:4px;padding-left:12px;font-size:11px;color:#92400e">📋 ${m.actionNotes[job]}</div>`:"";
+      return`<div class="hist-job"><div class="hist-job-name">${job}</div>${items}${note}</div>`;
     }).join("");
-
-    return `<div class="hist-entry" id="mtg-${m.id}">
-      <div class="hist-hdr">
-        <span>${fmtDisplay(m.date)}</span>
-        <span>${m.discussedJobs?m.discussedJobs.length:Object.keys(byJob).length} jobs discussed</span>
-      </div>
-      ${jobHTML||'<div class="hist-job" style="color:#94a3b8;font-size:12px">No changes logged.</div>'}
+    const jc=[...new Set(m.changes.map(c=>c.job))].length;
+    return`<div class="hist-entry" id="mtg-${m.id}">
+      <div class="hist-hdr"><span>${fmtDisplay(m.date)}</span><span>${jc} jobs updated</span></div>
+      ${jobHTML||'<div class="hist-job" style="color:#94a3b8;font-size:12px;padding:10px 14px">No changes logged.</div>'}
     </div>`;
   }).join("");
 
-  app.innerHTML = `
-    <div class="header">
-      <div><div class="eyebrow">DEME — JOB TRACKING</div><div class="page-title">Meeting History</div></div>
-      <button class="btn-ghost" onclick="view='home';render()">← Home</button>
-    </div>
+  document.getElementById("app").innerHTML=`
+    <div class="header"><div><div class="eyebrow">DEME — JOB TRACKING</div><div class="page-title">Meeting History</div></div>
+    <button class="btn-ghost" onclick="view='home';render()">← Home</button></div>
     <div class="card" style="padding:12px 16px;background:#eff6ff;border-color:#bdd7ee">
-      <div style="font-size:12px;color:#1e3a5f">
-        💡 <strong>Current job statuses carry forward automatically.</strong> This log shows what changed each week.
-      </div>
+      <div style="font-size:12px;color:#1e3a5f">💡 <strong>Job statuses carry forward automatically.</strong> This log shows what changed each week — including your action items from Chris.</div>
     </div>
-    ${entries}
-  `;
+    ${entries}`;
 }
 </script>
 </body>
