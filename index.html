@@ -42,7 +42,7 @@ body{font-family:Arial,sans-serif;background:#f8fafc;min-height:100vh}
 .field-label{font-size:9px;font-weight:bold;color:#94a3b8;letter-spacing:.08em;margin-bottom:4px}
 
 input,select,textarea{border:1px solid #e2e8f0;border-radius:6px;padding:7px 9px;font-size:12px;color:#1e293b;background:#fff;width:100%;font-family:Arial,sans-serif}
-textarea{resize:vertical;min-height:60px}
+textarea{resize:vertical;min-height:52px}
 
 .layout{display:flex;gap:14px;align-items:flex-start}
 .sidebar{width:200px;flex-shrink:0;background:#fff;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;max-height:85vh;overflow-y:auto}
@@ -53,59 +53,60 @@ textarea{resize:vertical;min-height:60px}
 .si-name{font-size:10px;font-weight:bold;color:#334155;line-height:1.3}
 
 .detail{flex:1;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;max-height:85vh;overflow-y:auto;min-width:0}
-.job-title{font-size:14px;font-weight:bold;color:#1e293b;margin-bottom:4px}
 
 .action-box{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;margin-bottom:12px}
 .action-label{font-size:10px;font-weight:bold;color:#92400e;letter-spacing:.08em;margin-bottom:6px}
 
-/* Section block */
+/* Section */
 .sec-block{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:10px;overflow:hidden}
 .sec-hdr{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;cursor:pointer;user-select:none}
 .sec-title{font-size:11px;font-weight:bold;color:#fff;letter-spacing:.04em}
 .sec-body{border-top:1px solid #e2e8f0;display:none}
 .sec-body.open{display:block}
-.sec-na{opacity:.5;pointer-events:none}
 
-/* Item card — vertical layout, no horizontal scroll */
-.item-card{border-bottom:1px solid #f1f5f9;padding:12px 14px}
-.item-card:last-of-type{border-bottom:none}
-.item-card:nth-child(even){background:#fafafa}
-.item-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.item-name-txt{font-size:12px;font-weight:bold;color:#1e293b}
-.item-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.item-fields-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
-.item-full{grid-column:1/-1}
+/* Main item */
+.main-item{border-bottom:2px solid rgba(0,0,0,.08);padding:12px 14px}
+.main-item:last-of-type{border-bottom:none}
+.main-item-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.main-item-name{font-size:13px;font-weight:bold;color:#1e293b}
+.main-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.main-fields-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
+.full-col{grid-column:1/-1}
 
-.sum-badge{font-size:9px;font-weight:bold;padding:2px 6px;border-radius:999px;margin-right:4px}
-.delivered-yes{background:#d1fae5;color:#065f46;font-weight:bold;font-size:11px}
-.delivered-no{background:#f1f5f9;color:#94a3b8;font-size:11px}
+/* Sub items */
+.sub-items{margin-top:8px;margin-left:16px;border-left:3px solid #e2e8f0;padding-left:12px}
+.sub-item{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:10px 12px;margin-bottom:6px}
+.sub-item-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sub-item-name{font-size:12px;font-weight:bold;color:#334155}
+.sub-fields{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.sub-full{grid-column:1/-1}
+.check-label{display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer;font-weight:bold}
+.check-label input{width:auto;margin:0}
+
+.sum-badge{font-size:9px;font-weight:bold;padding:2px 6px;border-radius:999px;margin-right:3px}
 
 .nav-row{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid #f1f5f9}
-
-.alert{padding:10px 14px;border-radius:8px;margin-bottom:12px;font-size:13px;font-weight:bold}
-.alert-ok{background:#d1fae5;color:#065f46}
-.alert-warn{background:#fef9c3;color:#854d0e}
-.alert-err{background:#fee2e2;color:#991b1b}
-
-.meeting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #f1f5f9}
-.hist-entry{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:10px;overflow:hidden}
-.hist-hdr{background:#1e3a5f;color:#fff;padding:9px 13px;font-size:12px;font-weight:bold;display:flex;justify-content:space-between}
-.hist-job{padding:8px 13px;border-bottom:1px solid #f1f5f9;font-size:12px}
-.hist-job:last-child{border-bottom:none}
-.hist-job-name{font-weight:bold;color:#1e293b;margin-bottom:3px;font-size:11px}
-.hist-item{color:#475569;font-size:11px;padding:1px 0 1px 12px}
-
 .progress-wrap{display:flex;gap:10px;align-items:center;margin-bottom:12px}
 .progress-bar{flex:1;height:5px;background:#e2e8f0;border-radius:999px;overflow:hidden}
 .progress-fill{height:100%;background:#10b981;border-radius:999px;transition:width .3s}
+
+.alert{padding:10px 14px;border-radius:8px;margin-bottom:12px;font-size:13px;font-weight:bold}
+.alert-ok{background:#d1fae5;color:#065f46}
+.meeting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid #f1f5f9}
+.hist-entry{border:1px solid #e2e8f0;border-radius:8px;margin-bottom:10px;overflow:hidden}
+.hist-hdr{background:#1e3a5f;color:#fff;padding:9px 13px;font-size:12px;font-weight:bold;display:flex;justify-content:space-between}
+.hist-job{padding:8px 13px;border-bottom:1px solid #f1f5f9}
+.hist-job:last-child{border-bottom:none}
+.hist-job-name{font-weight:bold;color:#1e293b;margin-bottom:3px;font-size:11px}
+.hist-item{color:#475569;font-size:11px;padding:1px 0 1px 12px}
 .save-ind{font-size:11px;color:#10b981;font-weight:bold}
 .empty{color:#94a3b8;font-size:14px;text-align:center;padding:40px}
 
 @media(max-width:640px){
   .layout{flex-direction:column}
   .sidebar{width:100%;max-height:160px}
-  .item-fields,.item-fields-3{grid-template-columns:1fr}
-  .item-full{grid-column:1}
+  .main-fields,.main-fields-3,.sub-fields{grid-template-columns:1fr}
+  .full-col,.sub-full{grid-column:1}
 }
 </style>
 </head>
@@ -141,15 +142,14 @@ const JOBS=[
 ];
 
 const SEC_DEFAULTS={
-  "STORM DRAINAGE":   ["PIPE","FITTINGS","YARD DRAINS","UNDER DRAIN"],
-  "FORCE MAIN":       ["PVC","PRESSURE MATERIAL","PUNCH OUT MATERIAL","LIFT STATION MATERIAL"],
-  "SANITARY SEWER":   ["PVC","FITTINGS","PUNCH OUT MATERIAL"],
-  "POTABLE WATER":    ["PVC","PRESSURE MATERIAL","SERVICE BRASS","PUNCH OUT MATERIAL"],
-  "FIRE":             ["PVC","PRESSURE MATERIAL","FIRE RISERS","PUNCH OUT MATERIAL"],
-  "RECLAIM":          ["PVC","PRESSURE MATERIAL","SERVICE BRASS","PUNCH OUT MATERIAL"],
+  "STORM DRAINAGE":  ["PIPE","FITTINGS","YARD DRAINS","UNDER DRAIN"],
+  "FORCE MAIN":      ["PVC","PRESSURE MATERIAL","PUNCH OUT MATERIAL","LIFT STATION MATERIAL"],
+  "SANITARY SEWER":  ["PVC","FITTINGS","PUNCH OUT MATERIAL"],
+  "POTABLE WATER":   ["PVC","PRESSURE MATERIAL","SERVICE BRASS","PUNCH OUT MATERIAL"],
+  "FIRE":            ["PVC","PRESSURE MATERIAL","FIRE RISERS","PUNCH OUT MATERIAL"],
+  "RECLAIM":         ["PVC","PRESSURE MATERIAL","SERVICE BRASS","PUNCH OUT MATERIAL"],
 };
 const ALL_SECS=Object.keys(SEC_DEFAULTS);
-
 const SEC_COLORS={
   "STORM DRAINAGE":{hdr:"#2980b9",bg:"#e8f4fb"},
   "FORCE MAIN":    {hdr:"#27ae60",bg:"#eafaf1"},
@@ -161,39 +161,50 @@ const SEC_COLORS={
 
 const STATUS_OPTS=["","IN STOCK","RELEASED","PENDING RELEASE","NEEDS ORDERING","ON HOLD","COMPLETE","N/A"];
 const STATUS_ST={
-  "IN STOCK":        {bg:"#dbeafe",color:"#1e40af",dot:"#3b82f6"},
-  "RELEASED":        {bg:"#d1fae5",color:"#065f46",dot:"#10b981"},
-  "PENDING RELEASE": {bg:"#fef9c3",color:"#854d0e",dot:"#eab308"},
-  "NEEDS ORDERING":  {bg:"#fee2e2",color:"#991b1b",dot:"#ef4444"},
-  "ON HOLD":         {bg:"#f1f5f9",color:"#475569",dot:"#94a3b8"},
-  "COMPLETE":        {bg:"#ede9fe",color:"#4c1d95",dot:"#8b5cf6"},
-  "N/A":             {bg:"#f1f5f9",color:"#94a3b8",dot:"#e2e8f0"},
+  "IN STOCK":        {bg:"#dbeafe",color:"#1e40af"},
+  "RELEASED":        {bg:"#d1fae5",color:"#065f46"},
+  "PENDING RELEASE": {bg:"#fef9c3",color:"#854d0e"},
+  "NEEDS ORDERING":  {bg:"#fee2e2",color:"#991b1b"},
+  "ON HOLD":         {bg:"#f1f5f9",color:"#475569"},
+  "COMPLETE":        {bg:"#ede9fe",color:"#4c1d95"},
+  "N/A":             {bg:"#f1f5f9",color:"#94a3b8"},
 };
 
-// State
-let role="claire",view="home",activeJobIdx=0,expandedSecs={},discussed={};
-let jobItems={},jobNotes={},meetings=[],activeMtgId=null;
-// jobItems[job][sec] = [{id, name, status, poSupplier, deliveryDate, delivered, notes, na, custom}]
+// Data structure:
+// jobData[job][sec] = {
+//   na: bool,
+//   items: [{id, name, status, releaseDate, shipDate, poSupplier, deliveryDate, delivered, notes, na,
+//             subs: [{id, name, released, delivered, notes}]}]
+// }
 
-function blankItem(name,custom=false){
-  return{id:Date.now()+Math.random(),name,status:"",poSupplier:"",deliveryDate:"",delivered:"no",notes:"",na:false,custom};
+let role="claire", view="home", activeJobIdx=0, expandedSecs={}, discussed={};
+let jobData={}, jobNotes={}, meetings=[], activeMtgId=null;
+
+function uid(){return Date.now()+"-"+Math.floor(Math.random()*100000);}
+
+function blankMain(name){
+  return{id:uid(),name,status:"",releaseDate:"",shipDate:"",poSupplier:"",deliveryDate:"",delivered:"no",notes:"",na:false,subs:[]};
+}
+function blankSub(name){
+  return{id:uid(),name,released:false,delivered:"no",notes:""};
 }
 
 function initJob(job){
-  if(!jobItems[job]){
-    jobItems[job]={};
+  if(!jobData[job]){
+    jobData[job]={};
     ALL_SECS.forEach(sec=>{
-      jobItems[job][sec]={na:false,items:SEC_DEFAULTS[sec].map(n=>blankItem(n))};
+      jobData[job][sec]={na:false,items:SEC_DEFAULTS[sec].map(n=>blankMain(n))};
     });
   }
-  if(!jobNotes[job])jobNotes[job]="";
+  if(jobNotes[job]===undefined)jobNotes[job]="";
 }
 
 // ── SUPABASE ──────────────────────────────────────────────────────────────────
 async function sb(path,opts={}){
   const r=await fetch(`${SURL}/rest/v1/${path}`,{
     ...opts,
-    headers:{"apikey":SKEY,"Authorization":`Bearer ${SKEY}`,"Content-Type":"application/json","Prefer":opts.prefer||"return=representation",...(opts.headers||{})}
+    headers:{"apikey":SKEY,"Authorization":`Bearer ${SKEY}`,"Content-Type":"application/json",
+      "Prefer":opts.prefer||"return=representation",...(opts.headers||{})}
   });
   const t=await r.text();
   return t?JSON.parse(t):[];
@@ -201,71 +212,63 @@ async function sb(path,opts={}){
 
 async function loadAll(){
   try{
-    const[items,notes,mtgs]=await Promise.all([
-      sb("job_items?select=*"),
+    const[rows,notes,mtgs]=await Promise.all([
+      sb("job_items2?select=*"),
       sb("job_notes?select=*"),
       sb("meeting_log?select=*&order=meeting_date.desc"),
     ]);
-
     JOBS.forEach(j=>initJob(j));
-
-    // Override with saved items
-    const byJob={};
-    items.forEach(r=>{
-      if(!byJob[r.job])byJob[r.job]={};
-      if(!byJob[r.job][r.section])byJob[r.job][r.section]={na:false,items:[]};
-      byJob[r.job][r.section].na=r.section_na||false;
-      byJob[r.job][r.section].items.push({
-        id:r.item_id,name:r.name,status:r.status||"",
-        poSupplier:r.po_supplier||"",deliveryDate:r.delivery_date||"",
-        delivered:r.delivered||"no",notes:r.notes||"",na:r.item_na||false,custom:r.custom||false
+    // group by job/sec
+    const grouped={};
+    rows.forEach(r=>{
+      if(!grouped[r.job])grouped[r.job]={};
+      if(!grouped[r.job][r.section])grouped[r.job][r.section]={na:r.section_na||false,items:[]};
+      grouped[r.job][r.section].na=grouped[r.job][r.section].na||r.section_na||false;
+      grouped[r.job][r.section].items.push({
+        id:r.item_id, name:r.name, status:r.status||"",
+        releaseDate:r.release_date||"", shipDate:r.ship_date||"",
+        poSupplier:r.po_supplier||"", deliveryDate:r.delivery_date||"",
+        delivered:r.delivered||"no", notes:r.notes||"", na:r.item_na||false,
+        subs:(r.subs||[])
       });
     });
-    Object.keys(byJob).forEach(job=>{
-      if(jobItems[job])jobItems[job]=byJob[job];
+    Object.keys(grouped).forEach(job=>{
+      if(jobData[job])jobData[job]=grouped[job];
     });
-
-    notes.forEach(r=>{if(jobNotes[r.job]!==undefined)jobNotes[r.job]=r.notes||"";});
-
-    meetings=mtgs.map(m=>({id:m.id,date:m.meeting_date,changes:m.changes||[],discussedJobs:m.discussed_jobs||[],actionNotes:m.action_notes||{}}));
-  }catch(e){console.error("Load:",e);}
+    notes.forEach(r=>{if(r.job in jobNotes||true)jobNotes[r.job]=r.notes||"";});
+    meetings=mtgs.map(m=>({id:m.id,date:m.meeting_date,changes:m.changes||[],
+      discussedJobs:m.discussed_jobs||[],actionNotes:m.action_notes||{}}));
+  }catch(e){console.error("Load error:",e);}
 }
 
-async function saveItem(job,sec,item){
+async function saveMainItem(job,sec,item){
   try{
-    await sb("job_items",{
-      method:"POST",prefer:"resolution=merge-duplicates,return=minimal",
+    await sb("job_items2",{method:"POST",prefer:"resolution=merge-duplicates,return=minimal",
       body:JSON.stringify({
         job,section:sec,item_id:String(item.id),name:item.name,
-        status:item.status,po_supplier:item.poSupplier,delivery_date:item.deliveryDate,
+        status:item.status,release_date:item.releaseDate,ship_date:item.shipDate,
+        po_supplier:item.poSupplier,delivery_date:item.deliveryDate,
         delivered:item.delivered,notes:item.notes,item_na:item.na,
-        section_na:jobItems[job][sec].na,custom:item.custom,
+        section_na:jobData[job][sec].na,subs:item.subs,
         updated_at:new Date().toISOString()
       })
     });
-  }catch(e){console.error("Save item:",e);}
+  }catch(e){console.error("Save:",e);}
 }
 
-async function saveSectionNA(job,sec){
-  // update all items in section to reflect new section_na
-  const secData=jobItems[job][sec];
-  for(const item of secData.items){
-    await saveItem(job,sec,item);
-  }
+async function deleteMainItem(job,sec,itemId){
+  try{await sb(`job_items2?item_id=eq.${itemId}`,{method:"DELETE",prefer:""});}catch(e){}
 }
 
 async function saveNote(job){
-  try{
-    await sb("job_notes",{method:"POST",prefer:"resolution=merge-duplicates,return=minimal",
-      body:JSON.stringify({job,notes:jobNotes[job],updated_at:new Date().toISOString()})});
-  }catch(e){}
+  try{await sb("job_notes",{method:"POST",prefer:"resolution=merge-duplicates,return=minimal",
+    body:JSON.stringify({job,notes:jobNotes[job],updated_at:new Date().toISOString()})});}catch(e){}
 }
 
 async function saveMtgLog(m){
-  try{
-    await sb("meeting_log",{method:"POST",prefer:"resolution=merge-duplicates,return=minimal",
-      body:JSON.stringify({id:m.id,meeting_date:m.date,changes:m.changes,discussed_jobs:m.discussedJobs,action_notes:m.actionNotes})});
-  }catch(e){}
+  try{await sb("meeting_log",{method:"POST",prefer:"resolution=merge-duplicates,return=minimal",
+    body:JSON.stringify({id:m.id,meeting_date:m.date,changes:m.changes,
+      discussed_jobs:m.discussedJobs,action_notes:m.actionNotes})});}catch(e){}
 }
 
 // ── LOGIN ─────────────────────────────────────────────────────────────────────
@@ -276,21 +279,26 @@ function setRole(r){
 }
 
 async function tryLogin(){
-  if(document.getElementById("pw").value!==PW){document.getElementById("login-err").textContent="Incorrect password.";return;}
+  if(document.getElementById("pw").value!==PW){
+    document.getElementById("login-err").textContent="Incorrect password.";return;
+  }
   document.getElementById("login-err").textContent="Loading...";
-  // Need job_items table — create if needed via upsert approach
   await loadAll();
   document.getElementById("login-screen").style.display="none";
   document.getElementById("app").style.display="block";
   view="home";render();
 }
 
-// ── HELPERS ───────────────────────────────────────────────────────────────────
 function today(){return new Date().toISOString().split("T")[0];}
 function fmtDate(iso){if(!iso)return"";const[y,m,d]=iso.split("-");return`${m}/${d}/${y}`;}
 function fmtDisp(iso){if(!iso)return"";return new Date(iso+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});}
 function esc(s){return(s||"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/'/g,"&#39;").replace(/</g,"&lt;");}
-function showSaveInd(msg="✅ Saved"){const el=document.getElementById("save-ind");if(el){el.textContent=msg;setTimeout(()=>{if(el)el.textContent="";},2000);}}
+
+function logout(){
+  document.getElementById("app").style.display="none";
+  document.getElementById("login-screen").style.display="flex";
+  document.getElementById("pw").value="";
+}
 
 function render(){
   if(role==="alex")renderAlex();
@@ -299,7 +307,7 @@ function render(){
   else if(view==="history")renderHistory();
 }
 
-// ── CLAIRE HOME ───────────────────────────────────────────────────────────────
+// ── HOME ──────────────────────────────────────────────────────────────────────
 function renderHome(){
   const rows=meetings.slice(0,6).map(m=>{
     const jc=[...new Set(m.changes.map(c=>c.job))].length;
@@ -331,12 +339,10 @@ function renderHome(){
     ${meetings.length>0?`<div class="card"><div class="card-label">RECENT MEETINGS</div>${rows}</div>`:`<div class="empty">No meetings yet — start one above!</div>`}`;
 }
 
-function logout(){document.getElementById("app").style.display="none";document.getElementById("login-screen").style.display="flex";document.getElementById("pw").value="";}
-
 function startMtg(){
   const date=document.getElementById("new-date").value||today();
   activeMtgId=Date.now();activeJobIdx=0;expandedSecs={};discussed={};
-  window._snap=JSON.parse(JSON.stringify(jobItems));
+  window._snap=JSON.parse(JSON.stringify(jobData));
   window._mtgDate=date;
   view="meeting";render();
 }
@@ -348,7 +354,7 @@ async function delMtg(id){
   render();
 }
 
-// ── CLAIRE MEETING ────────────────────────────────────────────────────────────
+// ── MEETING ───────────────────────────────────────────────────────────────────
 function renderMeeting(){
   const job=JOBS[activeJobIdx];
   initJob(job);
@@ -365,43 +371,89 @@ function renderMeeting(){
     </div>`).join("");
 
   const secs=ALL_SECS.map(sec=>{
-    const sd=jobItems[job][sec];
+    const sd=jobData[job][sec];
     const c=SEC_COLORS[sec];
     const key=`${activeJobIdx}-${sec}`;
     const open=expandedSecs[key];
     const relCount=sd.items.filter(it=>!it.na&&it.status==="RELEASED").length;
     const badges=relCount?`<span class="sum-badge" style="background:#d1fae5;color:#065f46">${relCount} Released</span>`:"";
 
-    const itemCards=sd.items.map((it,ii)=>{
-      const st=STATUS_ST[it.status]||{};
-      const statusBadge=it.status?`<span class="sum-badge" style="background:${st.bg};color:${st.color}">${it.status}</span>`:"";
-      const opts=STATUS_OPTS.map(o=>`<option value="${o}"${it.status===o?'selected':''}>${o||'— Status —'}</option>`).join("");
-      return`<div class="item-card" style="${it.na?'opacity:.45':''}">
-        <div class="item-top">
-          <span class="item-name-txt">${esc(it.name)} ${statusBadge}</span>
-          <div class="btn-row">
-            <label style="display:flex;align-items:center;gap:4px;font-size:11px;cursor:pointer;color:#94a3b8">
-              <input type="checkbox" ${it.na?'checked':''} onchange="toggleItemNA('${esc(job)}','${esc(sec)}',${ii},this.checked)" style="width:auto;margin:0"/>N/A
-            </label>
-            ${it.custom?`<button class="btn-danger" onclick="deleteItem('${esc(job)}','${esc(sec)}',${ii})">✕</button>`:''}
+    const mainItems=sd.items.map((item,ii)=>{
+      const st=STATUS_ST[item.status]||{};
+      const badge=item.status?`<span class="sum-badge" style="background:${st.bg};color:${st.color}">${item.status}</span>`:"";
+      const opts=STATUS_OPTS.map(o=>`<option value="${o}"${item.status===o?'selected':''}>${o||'— Status —'}</option>`).join("");
+
+      // Sub items
+      const subRows=(item.subs||[]).map((sub,si)=>`
+        <div class="sub-item">
+          <div class="sub-item-hdr">
+            <span class="sub-item-name">${esc(sub.name)}</span>
+            <button class="btn-danger" onclick="deleteSub('${esc(job)}','${esc(sec)}',${ii},${si})">✕ Remove</button>
           </div>
-        </div>
-        <div class="item-fields">
-          <div><div class="field-label">STATUS</div>
-            <select onchange="updItem('${esc(job)}','${esc(sec)}',${ii},'status',this.value)">${opts}</select></div>
-          <div><div class="field-label">RELEASE DATE</div>
-            <input type="date" value="${it.releaseDate||''}" onchange="updItem('${esc(job)}','${esc(sec)}',${ii},'releaseDate',this.value)"/></div>
-          <div><div class="field-label">SHIP DATE</div>
-            <div style="display:flex;flex-direction:column;gap:3px">
-              <label style="display:flex;align-items:center;gap:4px;font-size:11px;cursor:pointer">
-                <input type="checkbox" ${it.shipDate==='ASAP'?'checked':''} onchange="setAsap('${esc(job)}','${esc(sec)}',${ii},this.checked)" style="width:auto;margin:0"/>
-                <span style="font-weight:bold;color:#dc2626">ASAP</span>
+          <div class="sub-fields">
+            <div>
+              <label class="check-label" style="color:${sub.released?'#065f46':'#94a3b8'}">
+                <input type="checkbox" ${sub.released?'checked':''} onchange="updSub('${esc(job)}','${esc(sec)}',${ii},${si},'released',this.checked)" style="width:auto;margin:0"/>
+                ${sub.released?'✅ Released':'Not Released'}
               </label>
-              ${it.shipDate!=='ASAP'?`<input type="date" value="${it.shipDate||''}" onchange="updItem('${esc(job)}','${esc(sec)}',${ii},'shipDate',this.value)"/>`:`<div style="font-size:11px;background:#fee2e2;color:#991b1b;padding:4px 8px;border-radius:4px;font-weight:bold">🚨 SHIP ASAP</div>`}
-            </div></div>
-          <div class="item-full"><div class="field-label">NOTES</div>
-            <textarea rows="2" onchange="updItem('${esc(job)}','${esc(sec)}',${ii},'notes',this.value)">${esc(it.notes)}</textarea></div>
+            </div>
+            <div>
+              <div class="field-label">DELIVERED</div>
+              <select onchange="updSub('${esc(job)}','${esc(sec)}',${ii},${si},'delivered',this.value)">
+                <option value="no"${sub.delivered==='no'?'selected':''}>No</option>
+                <option value="yes"${sub.delivered==='yes'?'selected':''}>✅ Yes</option>
+                <option value="partial"${sub.delivered==='partial'?'selected':''}>Partial</option>
+              </select>
+            </div>
+            <div class="sub-full">
+              <div class="field-label">NOTES</div>
+              <textarea rows="2" placeholder="Notes..." onchange="updSub('${esc(job)}','${esc(sec)}',${ii},${si},'notes',this.value)">${esc(sub.notes)}</textarea>
+            </div>
+          </div>
+        </div>`).join("");
+
+      return`<div class="main-item" style="${item.na?'opacity:.5':''}">
+        <div class="main-item-hdr">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <span class="main-item-name">${esc(item.name)}</span>${badge}
+          </div>
+          <label class="check-label" style="color:#94a3b8">
+            <input type="checkbox" ${item.na?'checked':''} onchange="toggleItemNA('${esc(job)}','${esc(sec)}',${ii},this.checked)" style="width:auto;margin:0"/>
+            N/A
+          </label>
         </div>
+        <div class="main-fields">
+          <div><div class="field-label">STATUS</div>
+            <select onchange="updMain('${esc(job)}','${esc(sec)}',${ii},'status',this.value)">${opts}</select></div>
+          <div><div class="field-label">RELEASE DATE</div>
+            <input type="date" value="${item.releaseDate||''}" onchange="updMain('${esc(job)}','${esc(sec)}',${ii},'releaseDate',this.value)"/></div>
+        </div>
+        <div class="main-fields-3">
+          <div><div class="field-label">SHIP DATE / ASAP</div>
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <label class="check-label" style="color:#dc2626">
+                <input type="checkbox" ${item.shipDate==='ASAP'?'checked':''} onchange="setAsap('${esc(job)}','${esc(sec)}',${ii},this.checked)" style="width:auto;margin:0"/>
+                ASAP
+              </label>
+              ${item.shipDate!=='ASAP'?`<input type="date" value="${item.shipDate||''}" onchange="updMain('${esc(job)}','${esc(sec)}',${ii},'shipDate',this.value)"/>`:`<div style="font-size:11px;background:#fee2e2;color:#991b1b;padding:4px 8px;border-radius:4px;font-weight:bold">🚨 SHIP ASAP</div>`}
+            </div></div>
+          <div><div class="field-label">PO # / SUPPLIER</div>
+            <input type="text" value="${esc(item.poSupplier)}" placeholder="PO# / Supplier" onchange="updMain('${esc(job)}','${esc(sec)}',${ii},'poSupplier',this.value)"/></div>
+          <div><div class="field-label">DELIVERED</div>
+            <select onchange="updMain('${esc(job)}','${esc(sec)}',${ii},'delivered',this.value)">
+              <option value="no"${item.delivered==='no'?'selected':''}>No</option>
+              <option value="yes"${item.delivered==='yes'?'selected':''}>✅ Yes</option>
+              <option value="partial"${item.delivered==='partial'?'selected':''}>Partial</option>
+            </select></div>
+        </div>
+        <div class="main-fields">
+          <div><div class="field-label">DELIVERY DATE</div>
+            <input type="date" value="${item.deliveryDate||''}" onchange="updMain('${esc(job)}','${esc(sec)}',${ii},'deliveryDate',this.value)"/></div>
+          <div class="full-col"><div class="field-label">NOTES</div>
+            <textarea rows="2" placeholder="Notes..." onchange="updMain('${esc(job)}','${esc(sec)}',${ii},'notes',this.value)">${esc(item.notes)}</textarea></div>
+        </div>
+        ${subRows.length?`<div class="sub-items">${subRows}</div>`:''}
+        <button class="btn-add" onclick="addSub('${esc(job)}','${esc(sec)}',${ii})">+ Add Sub-Item</button>
       </div>`;
     }).join("");
 
@@ -409,21 +461,18 @@ function renderMeeting(){
       <div class="sec-hdr" style="background:${c.hdr}" onclick="toggleSec('${key}')">
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
           <span class="sec-title">${sec}</span>${badges}
-          ${sd.na?'<span class="sum-badge" style="background:rgba(255,255,255,.2);color:#fff">N/A</span>':''}
+          ${sd.na?'<span class="sum-badge" style="background:rgba(255,255,255,.25);color:#fff">SECTION N/A</span>':''}
         </div>
-        <div style="display:flex;align-items:center;gap:8px" onclick="event.stopPropagation()">
-          <label style="display:flex;align-items:center;gap:4px;font-size:10px;color:rgba(255,255,255,.8);cursor:pointer">
+        <div style="display:flex;align-items:center;gap:10px" onclick="event.stopPropagation()">
+          <label class="check-label" style="color:rgba(255,255,255,.8)">
             <input type="checkbox" ${sd.na?'checked':''} onchange="toggleSecNA('${esc(job)}','${esc(sec)}',this.checked)" style="width:auto;margin:0"/>
-            Whole section N/A
+            Section N/A
           </label>
           <span style="color:rgba(255,255,255,.7);font-size:11px">${open?'▲':'▼'}</span>
         </div>
       </div>
       <div class="sec-body${open?' open':''}" style="background:${c.bg}">
-        ${itemCards}
-        <div style="padding:8px 14px">
-          <button class="btn-add" onclick="addItem('${esc(job)}','${esc(sec)}')">+ Add Item</button>
-        </div>
+        ${sd.na?`<div style="padding:16px;text-align:center;color:#94a3b8;font-size:13px">This section is marked N/A for this job.</div>`:mainItems}
       </div>
     </div>`;
   }).join("");
@@ -433,21 +482,21 @@ function renderMeeting(){
       <div><div class="eyebrow">MEETING — ${fmtDisp(window._mtgDate)}</div>
       <div class="page-title" style="font-size:16px">${job}</div></div>
       <div class="btn-row">
-        <button class="btn-green" onclick="saveMeeting()">💾 Save</button>
+        <button class="btn-green" onclick="saveMeeting()">💾 Save Meeting</button>
         <button class="btn-ghost" onclick="view='home';render()">← Home</button>
       </div>
     </div>
     <div id="alert-box"></div>
     <div class="progress-wrap">
       <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
-      <span style="font-size:11px;color:#64748b;white-space:nowrap">${dc}/${JOBS.length}</span>
+      <span style="font-size:11px;color:#64748b;white-space:nowrap">${dc}/${JOBS.length} jobs</span>
     </div>
     <div class="layout">
       <div class="sidebar">${sidebar}</div>
       <div class="detail">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
-          <div class="job-title">${job}</div>
-          <label style="display:flex;align-items:center;font-size:12px;color:#475569;cursor:pointer;gap:6px">
+          <div style="font-size:14px;font-weight:bold;color:#1e293b">${job}</div>
+          <label class="check-label" style="color:#475569">
             <input type="checkbox" ${discussed[job]?'checked':''} onchange="setDisc('${esc(job)}',this.checked)" style="width:auto;margin:0"/>
             Discussed this meeting
           </label>
@@ -472,44 +521,52 @@ function nextJob(){if(activeJobIdx<JOBS.length-1){activeJobIdx++;render();}}
 function toggleSec(k){expandedSecs[k]=!expandedSecs[k];render();}
 function setDisc(job,v){discussed[job]=v;render();}
 
-async function updItem(job,sec,ii,field,val){
-  jobItems[job][sec].items[ii][field]=val;
-  await saveItem(job,sec,jobItems[job][sec].items[ii]);
+async function updMain(job,sec,ii,field,val){
+  jobData[job][sec].items[ii][field]=val;
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
 }
 
 async function setAsap(job,sec,ii,checked){
-  jobItems[job][sec].items[ii].shipDate=checked?'ASAP':'';
-  await saveItem(job,sec,jobItems[job][sec].items[ii]);
+  jobData[job][sec].items[ii].shipDate=checked?'ASAP':'';
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
   render();
 }
 
 async function toggleItemNA(job,sec,ii,val){
-  jobItems[job][sec].items[ii].na=val;
-  await saveItem(job,sec,jobItems[job][sec].items[ii]);
+  jobData[job][sec].items[ii].na=val;
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
   render();
 }
 
 async function toggleSecNA(job,sec,val){
-  jobItems[job][sec].na=val;
-  await saveSectionNA(job,sec);
+  jobData[job][sec].na=val;
+  // save all items to update section_na
+  for(const item of jobData[job][sec].items){
+    await saveMainItem(job,sec,item);
+  }
   render();
 }
 
-async function addItem(job,sec){
-  const name=prompt("Item name:");
+async function addSub(job,sec,ii){
+  const name=prompt("Sub-item name (e.g. 18\" RCP, 12\" HDPE):");
   if(!name||!name.trim())return;
-  const item=blankItem(name.trim(),true);
-  jobItems[job][sec].items.push(item);
-  await saveItem(job,sec,item);
+  const sub=blankSub(name.trim());
+  jobData[job][sec].items[ii].subs.push(sub);
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
   render();
 }
 
-async function deleteItem(job,sec,ii){
-  if(!confirm("Delete this item?"))return;
-  const item=jobItems[job][sec].items[ii];
-  jobItems[job][sec].items.splice(ii,1);
-  try{await sb(`job_items?item_id=eq.${item.id}`,{method:"DELETE",prefer:""});}catch(e){}
+async function deleteSub(job,sec,ii,si){
+  if(!confirm("Remove this sub-item?"))return;
+  jobData[job][sec].items[ii].subs.splice(si,1);
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
   render();
+}
+
+async function updSub(job,sec,ii,si,field,val){
+  jobData[job][sec].items[ii].subs[si][field]=val;
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
+  if(field==='released'||field==='delivered')render();
 }
 
 async function updNotes(job,val){jobNotes[job]=val;await saveNote(job);}
@@ -522,14 +579,13 @@ async function saveMeeting(){
   discJobs.forEach(job=>{
     if(jobNotes[job])actionNotes[job]=jobNotes[job];
     ALL_SECS.forEach(sec=>{
-      const curr=jobItems[job]?.[sec]?.items||[];
+      const curr=jobData[job]?.[sec]?.items||[];
       const prev=snap[job]?.[sec]?.items||[];
       curr.forEach(item=>{
         const old=prev.find(p=>p.id===item.id)||{};
-        ["status","shipDate","poSupplier","deliveryDate","delivered"].forEach(f=>{
-          if(item[f]!==(old[f]||"")&&item[f]){
+        ["status","shipDate","releaseDate"].forEach(f=>{
+          if(item[f]!==(old[f]||"")&&item[f])
             changes.push({job,sec,item:item.name,field:f,value:item[f]});
-          }
         });
       });
     });
@@ -537,7 +593,7 @@ async function saveMeeting(){
   const m={id:activeMtgId,date:window._mtgDate,changes,discussedJobs:discJobs,actionNotes};
   meetings.unshift(m);
   await saveMtgLog(m);
-  document.getElementById("alert-box").innerHTML=`<div class="alert alert-ok">✅ Meeting saved! ${changes.length} update${changes.length!==1?'s':''} across ${discJobs.length} job${discJobs.length!==1?'s':''}.</div>`;
+  document.getElementById("alert-box").innerHTML=`<div class="alert alert-ok">✅ Saved! ${changes.length} update${changes.length!==1?'s':''} across ${discJobs.length} job${discJobs.length!==1?'s':''}.</div>`;
   setTimeout(()=>{view="home";render();},2000);
 }
 
@@ -548,7 +604,7 @@ function renderHistory(){
     m.changes.forEach(c=>{if(!byJob[c.job])byJob[c.job]=[];byJob[c.job].push(c);});
     const jHTML=Object.keys(byJob).map(job=>{
       const its=byJob[job].map(c=>{
-        const label=c.field==="status"?c.value:c.field==="shipDate"?`Ship: ${c.value==='ASAP'?'🚨 ASAP':fmtDate(c.value)}`:c.field==="delivered"?`Delivered: ${c.value}`:`${c.field}: ${c.value}`;
+        const label=c.field==="status"?c.value:c.field==="shipDate"?`Ship: ${c.value==='ASAP'?'🚨 ASAP':fmtDate(c.value)}`:c.field==="releaseDate"?`Release Date: ${fmtDate(c.value)}`:`${c.field}: ${c.value}`;
         const st=STATUS_ST[c.value]||{};
         const b=c.field==="status"&&st.bg?`<span class="sum-badge" style="background:${st.bg};color:${st.color}">${c.value}</span>`:`<span>${label}</span>`;
         return`<div class="hist-item">• ${c.sec} → ${c.item}: ${b}</div>`;
@@ -575,7 +631,7 @@ function renderAlex(){
   initJob(job);
 
   const sidebar=JOBS.map((j,i)=>{
-    const allItems=ALL_SECS.flatMap(s=>(jobItems[j]?.[s]?.items||[]));
+    const allItems=ALL_SECS.flatMap(s=>(jobData[j]?.[s]?.items||[]));
     const deliv=allItems.filter(it=>it.delivered==="yes").length;
     return`<div class="si${i===activeJobIdx?' active':''}" onclick="selJob(${i})">
       <div style="display:flex;align-items:center;min-width:0">
@@ -587,53 +643,71 @@ function renderAlex(){
   }).join("");
 
   const secs=ALL_SECS.map(sec=>{
-    const sd=jobItems[job][sec];
+    const sd=jobData[job][sec];
     const c=SEC_COLORS[sec];
     const key=`alex-${activeJobIdx}-${sec}`;
     const open=expandedSecs[key];
     const delivCount=sd.items.filter(it=>it.delivered==="yes").length;
     const badge=delivCount?`<span class="sum-badge" style="background:#d1fae5;color:#065f46">${delivCount}/${sd.items.length} Delivered</span>`:"";
 
-    const itemCards=sd.items.map((it,ii)=>{
-      const relInfo=it.status?`<span class="sum-badge" style="background:${(STATUS_ST[it.status]||{}).bg||'#f1f5f9'};color:${(STATUS_ST[it.status]||{}).color||'#475569'}">${it.status}</span>`:"";
-      const shipInfo=it.shipDate?`<span style="font-size:10px;color:#64748b;margin-left:4px">${it.shipDate==='ASAP'?'🚨 ASAP':'Ship: '+fmtDate(it.shipDate)}</span>`:"";
-      return`<div class="item-card">
-        <div class="item-top">
-          <span class="item-name-txt">${esc(it.name)} ${relInfo}${shipInfo}</span>
-          <label style="display:flex;align-items:center;gap:4px;font-size:11px;cursor:pointer;color:#94a3b8">
-            <input type="checkbox" ${it.na?'checked':''} onchange="alexToggleNA('${esc(job)}','${esc(sec)}',${ii},this.checked)" style="width:auto;margin:0"/>N/A
-          </label>
+    const mainItems=sd.items.map((item,ii)=>{
+      const relInfo=item.status?`<span class="sum-badge" style="background:${(STATUS_ST[item.status]||{}).bg||'#f1f5f9'};color:${(STATUS_ST[item.status]||{}).color||'#475569'}">${item.status}</span>`:"";
+      const shipInfo=item.shipDate?`<span style="font-size:10px;color:#64748b;margin-left:4px">${item.shipDate==='ASAP'?'🚨 ASAP':'Ship: '+fmtDate(item.shipDate)}</span>`:"";
+
+      const subRows=(item.subs||[]).map((sub,si)=>`
+        <div class="sub-item">
+          <div class="sub-item-hdr">
+            <span class="sub-item-name">${esc(sub.name)}</span>
+            <span style="font-size:11px;font-weight:bold;color:${sub.released?'#065f46':'#94a3b8'}">${sub.released?'✅ Released':'Not Released'}</span>
+          </div>
+          <div class="sub-fields">
+            <div><div class="field-label">DELIVERED</div>
+              <select onchange="alexUpdSub('${esc(job)}','${esc(sec)}',${ii},${si},'delivered',this.value)">
+                <option value="no"${sub.delivered==='no'?'selected':''}>No</option>
+                <option value="yes"${sub.delivered==='yes'?'selected':''}>✅ Yes</option>
+                <option value="partial"${sub.delivered==='partial'?'selected':''}>Partial</option>
+              </select></div>
+            <div class="sub-full"><div class="field-label">NOTES</div>
+              <textarea rows="2" placeholder="Notes..." onchange="alexUpdSub('${esc(job)}','${esc(sec)}',${ii},${si},'notes',this.value)">${esc(sub.notes)}</textarea></div>
+          </div>
+        </div>`).join("");
+
+      return`<div class="main-item">
+        <div class="main-item-hdr">
+          <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <span class="main-item-name">${esc(item.name)}</span>${relInfo}${shipInfo}
+          </div>
         </div>
-        <div class="item-fields">
+        <div class="main-fields">
           <div><div class="field-label">PO # / SUPPLIER</div>
-            <input type="text" value="${esc(it.poSupplier)}" placeholder="PO# / Supplier name" onchange="alexUpd('${esc(job)}','${esc(sec)}',${ii},'poSupplier',this.value)"/></div>
+            <input type="text" value="${esc(item.poSupplier)}" placeholder="PO# / Supplier" onchange="alexUpdMain('${esc(job)}','${esc(sec)}',${ii},'poSupplier',this.value)"/></div>
           <div><div class="field-label">DELIVERED</div>
-            <select onchange="alexUpd('${esc(job)}','${esc(sec)}',${ii},'delivered',this.value)">
-              <option value="no"${it.delivered==='no'?'selected':''}>No</option>
-              <option value="yes"${it.delivered==='yes'?'selected':''}>✅ Yes</option>
-              <option value="partial"${it.delivered==='partial'?'selected':''}>Partial</option>
+            <select onchange="alexUpdMain('${esc(job)}','${esc(sec)}',${ii},'delivered',this.value)">
+              <option value="no"${item.delivered==='no'?'selected':''}>No</option>
+              <option value="yes"${item.delivered==='yes'?'selected':''}>✅ Yes</option>
+              <option value="partial"${item.delivered==='partial'?'selected':''}>Partial</option>
             </select></div>
-          <div><div class="field-label">DELIVERY DATE</div>
-            <input type="date" value="${it.deliveryDate||''}" onchange="alexUpd('${esc(job)}','${esc(sec)}',${ii},'deliveryDate',this.value)"/></div>
-          <div class="item-full"><div class="field-label">NOTES</div>
-            <textarea rows="2" placeholder="Delivery notes, short items, back order info..." onchange="alexUpd('${esc(job)}','${esc(sec)}',${ii},'notes',this.value)">${esc(it.notes)}</textarea></div>
         </div>
+        <div class="main-fields">
+          <div><div class="field-label">DELIVERY DATE</div>
+            <input type="date" value="${item.deliveryDate||''}" onchange="alexUpdMain('${esc(job)}','${esc(sec)}',${ii},'deliveryDate',this.value)"/></div>
+          <div class="full-col"><div class="field-label">NOTES</div>
+            <textarea rows="2" placeholder="Short items, back order, delivery notes..." onchange="alexUpdMain('${esc(job)}','${esc(sec)}',${ii},'notes',this.value)">${esc(item.notes)}</textarea></div>
+        </div>
+        ${subRows.length?`<div class="sub-items">${subRows}</div>`:''}
       </div>`;
     }).join("");
 
     return`<div class="sec-block">
       <div class="sec-hdr" style="background:${c.hdr}" onclick="toggleSec('${key}')">
-        <div style="display:flex;align-items:center;gap:8px">
-          <span class="sec-title">${sec}</span>${badge}
-          ${sd.na?'<span class="sum-badge" style="background:rgba(255,255,255,.2);color:#fff">N/A</span>':''}
+        <div style="display:flex;align-items:center;gap:8px">${badge}
+          <span class="sec-title">${sec}</span>
+          ${sd.na?'<span class="sum-badge" style="background:rgba(255,255,255,.25);color:#fff">N/A</span>':''}
         </div>
         <span style="color:rgba(255,255,255,.7);font-size:11px">${open?'▲':'▼'}</span>
       </div>
       <div class="sec-body${open?' open':''}" style="background:${c.bg}">
-        ${itemCards}
-        <div style="padding:8px 14px">
-          <button class="btn-add" onclick="alexAddItem('${esc(job)}','${esc(sec)}')">+ Add Item</button>
-        </div>
+        ${sd.na?`<div style="padding:16px;text-align:center;color:#94a3b8;font-size:13px">Marked N/A.</div>`:mainItems}
       </div>
     </div>`;
   }).join("");
@@ -651,7 +725,7 @@ function renderAlex(){
       <div class="sidebar">${sidebar}</div>
       <div class="detail">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-          <div class="job-title">${job}</div>
+          <div style="font-size:14px;font-weight:bold;color:#1e293b">${job}</div>
           <span style="font-size:11px;color:#94a3b8">Auto-saves</span>
         </div>
         ${secs}
@@ -664,27 +738,20 @@ function renderAlex(){
     </div>`;
 }
 
-async function alexUpd(job,sec,ii,field,val){
-  jobItems[job][sec].items[ii][field]=val;
+async function alexUpdMain(job,sec,ii,field,val){
+  jobData[job][sec].items[ii][field]=val;
   const ind=document.getElementById("save-ind");if(ind)ind.textContent="Saving...";
-  await saveItem(job,sec,jobItems[job][sec].items[ii]);
-  showSaveInd();
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
+  if(ind){ind.textContent="✅ Saved";setTimeout(()=>{if(ind)ind.textContent="";},2000);}
   if(field==="delivered")render();
 }
 
-async function alexToggleNA(job,sec,ii,val){
-  jobItems[job][sec].items[ii].na=val;
-  await saveItem(job,sec,jobItems[job][sec].items[ii]);
-  render();
-}
-
-async function alexAddItem(job,sec){
-  const name=prompt("Item name:");
-  if(!name||!name.trim())return;
-  const item=blankItem(name.trim(),true);
-  jobItems[job][sec].items.push(item);
-  await saveItem(job,sec,item);
-  render();
+async function alexUpdSub(job,sec,ii,si,field,val){
+  jobData[job][sec].items[ii].subs[si][field]=val;
+  const ind=document.getElementById("save-ind");if(ind)ind.textContent="Saving...";
+  await saveMainItem(job,sec,jobData[job][sec].items[ii]);
+  if(ind){ind.textContent="✅ Saved";setTimeout(()=>{if(ind)ind.textContent="";},2000);}
+  if(field==="delivered")render();
 }
 </script>
 </body>
