@@ -282,7 +282,14 @@ function renderMeeting(){
         <div class="item-date"><div class="field-label">RELEASE DATE</div>
           <input type="date" value="${d.releaseDate}" onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','releaseDate',this.value)"/></div>
         <div class="item-date"><div class="field-label">SHIP DATE</div>
-          <input type="date" value="${d.shipDate}" onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','shipDate',this.value)"/></div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <label style="display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer">
+              <input type="checkbox" ${d.shipDate==='ASAP'?'checked':''} onchange="setAsap('${esc(job)}','${esc(sec)}','${esc(item)}',this.checked)" style="width:auto;margin:0"/>
+              <span style="font-weight:bold;color:#dc2626">ASAP</span>
+            </label>
+            ${d.shipDate!=='ASAP'?`<input type="date" value="${d.shipDate}" onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','shipDate',this.value)"/>`:`<div style="font-size:11px;background:#fee2e2;color:#991b1b;padding:4px 8px;border-radius:4px;font-weight:bold">🚨 SHIP ASAP</div>`}
+          </div>
+        </div>
         <div class="item-notes"><div class="field-label">NOTES / PO#</div>
           <input type="text" value="${esc(d.notes)}" placeholder="PO#, supplier..." onchange="updateItem('${esc(job)}','${esc(sec)}','${esc(item)}','notes',this.value)"/></div>
       </div>`;
@@ -348,6 +355,7 @@ function toggleSec(key){expandedSecs[key]=!expandedSecs[key];render();}
 function setDiscussed(job,val){discussed[job]=val;saveData();render();}
 function updateNotes(job,val){jobNotes[job]=val;saveData();}
 function updateItem(job,sec,item,field,value){jobStatuses[job][sec][item][field]=value;saveData();}
+function setAsap(job,sec,item,checked){jobStatuses[job][sec][item].shipDate=checked?'ASAP':'';saveData();render();}
 
 function saveMeeting(){
   const snap=window._mtgSnapshot||{};
@@ -394,7 +402,7 @@ function renderHistory(){
     m.changes.forEach(c=>{if(!byJob[c.job])byJob[c.job]=[];byJob[c.job].push(c);});
     const jobHTML=Object.keys(byJob).map(job=>{
       const items=byJob[job].map(c=>{
-        let label=c.field==="status"?c.value:c.field==="releaseDate"?`Release: ${fmtDate(c.value)}`:c.field==="shipDate"?`Ship: ${fmtDate(c.value)}`:`Note: ${c.value}`;
+        let label=c.field==="status"?c.value:c.field==="releaseDate"?`Release: ${fmtDate(c.value)}`:c.field==="shipDate"?`Ship: ${c.value==='ASAP'?'🚨 ASAP':fmtDate(c.value)}`:`Note: ${c.value}`;
         const st=STATUS_ST[c.value]||{};
         const badge=c.field==="status"&&st.bg?`<span class="sum-badge" style="background:${st.bg};color:${st.color}">${c.value}</span>`:`<span>${label}</span>`;
         return`<div class="hist-item">• ${c.sec} → ${c.item}: ${badge}</div>`;
